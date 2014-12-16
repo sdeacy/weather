@@ -14,6 +14,16 @@
 		FECEADAD1A40313500510884 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FECEADAC1A40313500510884 /* Images.xcassets */; };
 		FECEADB01A40313500510884 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECEADAE1A40313500510884 /* LaunchScreen.xib */; };
 		FECEADBC1A40313500510884 /* SDFiveDayForecastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADBB1A40313500510884 /* SDFiveDayForecastTests.m */; };
+		FECEADD91A40352C00510884 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADC71A40352C00510884 /* AFHTTPRequestOperation.m */; };
+		FECEADDA1A40352C00510884 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADC91A40352C00510884 /* AFHTTPRequestOperationManager.m */; };
+		FECEADDB1A40352C00510884 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADCB1A40352C00510884 /* AFHTTPSessionManager.m */; };
+		FECEADDC1A40352C00510884 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADCE1A40352C00510884 /* AFNetworkReachabilityManager.m */; };
+		FECEADDD1A40352C00510884 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADD01A40352C00510884 /* AFSecurityPolicy.m */; };
+		FECEADDE1A40352C00510884 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADD21A40352C00510884 /* AFURLConnectionOperation.m */; };
+		FECEADDF1A40352C00510884 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADD41A40352C00510884 /* AFURLRequestSerialization.m */; };
+		FECEADE01A40352C00510884 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADD61A40352C00510884 /* AFURLResponseSerialization.m */; };
+		FECEADE11A40352C00510884 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADD81A40352C00510884 /* AFURLSessionManager.m */; };
+		FECEADE41A40392700510884 /* DayForecastTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADE31A40392700510884 /* DayForecastTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +50,27 @@
 		FECEADB51A40313500510884 /* SDFiveDayForecastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDFiveDayForecastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECEADBA1A40313500510884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FECEADBB1A40313500510884 /* SDFiveDayForecastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDFiveDayForecastTests.m; sourceTree = "<group>"; };
+		FECEADC61A40352C00510884 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		FECEADC71A40352C00510884 /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		FECEADC81A40352C00510884 /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		FECEADC91A40352C00510884 /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		FECEADCA1A40352C00510884 /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		FECEADCB1A40352C00510884 /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		FECEADCC1A40352C00510884 /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		FECEADCD1A40352C00510884 /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		FECEADCE1A40352C00510884 /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		FECEADCF1A40352C00510884 /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		FECEADD01A40352C00510884 /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		FECEADD11A40352C00510884 /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		FECEADD21A40352C00510884 /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		FECEADD31A40352C00510884 /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		FECEADD41A40352C00510884 /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		FECEADD51A40352C00510884 /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		FECEADD61A40352C00510884 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		FECEADD71A40352C00510884 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		FECEADD81A40352C00510884 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		FECEADE21A40392700510884 /* DayForecastTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayForecastTableViewCell.h; sourceTree = "<group>"; };
+		FECEADE31A40392700510884 /* DayForecastTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayForecastTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +112,7 @@
 		FECEAD9E1A40313400510884 /* SDFiveDayForecast */ = {
 			isa = PBXGroup;
 			children = (
+				FECEADC51A40352C00510884 /* AFNetworking */,
 				FECEADA31A40313400510884 /* AppDelegate.h */,
 				FECEADA41A40313400510884 /* AppDelegate.m */,
 				FECEADA61A40313400510884 /* ViewController.h */,
@@ -89,6 +121,8 @@
 				FECEADAC1A40313500510884 /* Images.xcassets */,
 				FECEADAE1A40313500510884 /* LaunchScreen.xib */,
 				FECEAD9F1A40313400510884 /* Supporting Files */,
+				FECEADE21A40392700510884 /* DayForecastTableViewCell.h */,
+				FECEADE31A40392700510884 /* DayForecastTableViewCell.m */,
 			);
 			path = SDFiveDayForecast;
 			sourceTree = "<group>";
@@ -117,6 +151,32 @@
 				FECEADBA1A40313500510884 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FECEADC51A40352C00510884 /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				FECEADC61A40352C00510884 /* AFHTTPRequestOperation.h */,
+				FECEADC71A40352C00510884 /* AFHTTPRequestOperation.m */,
+				FECEADC81A40352C00510884 /* AFHTTPRequestOperationManager.h */,
+				FECEADC91A40352C00510884 /* AFHTTPRequestOperationManager.m */,
+				FECEADCA1A40352C00510884 /* AFHTTPSessionManager.h */,
+				FECEADCB1A40352C00510884 /* AFHTTPSessionManager.m */,
+				FECEADCC1A40352C00510884 /* AFNetworking.h */,
+				FECEADCD1A40352C00510884 /* AFNetworkReachabilityManager.h */,
+				FECEADCE1A40352C00510884 /* AFNetworkReachabilityManager.m */,
+				FECEADCF1A40352C00510884 /* AFSecurityPolicy.h */,
+				FECEADD01A40352C00510884 /* AFSecurityPolicy.m */,
+				FECEADD11A40352C00510884 /* AFURLConnectionOperation.h */,
+				FECEADD21A40352C00510884 /* AFURLConnectionOperation.m */,
+				FECEADD31A40352C00510884 /* AFURLRequestSerialization.h */,
+				FECEADD41A40352C00510884 /* AFURLRequestSerialization.m */,
+				FECEADD51A40352C00510884 /* AFURLResponseSerialization.h */,
+				FECEADD61A40352C00510884 /* AFURLResponseSerialization.m */,
+				FECEADD71A40352C00510884 /* AFURLSessionManager.h */,
+				FECEADD81A40352C00510884 /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,7 +279,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FECEADD91A40352C00510884 /* AFHTTPRequestOperation.m in Sources */,
 				FECEADA81A40313400510884 /* ViewController.m in Sources */,
+				FECEADDA1A40352C00510884 /* AFHTTPRequestOperationManager.m in Sources */,
+				FECEADDC1A40352C00510884 /* AFNetworkReachabilityManager.m in Sources */,
+				FECEADE01A40352C00510884 /* AFURLResponseSerialization.m in Sources */,
+				FECEADDE1A40352C00510884 /* AFURLConnectionOperation.m in Sources */,
+				FECEADE41A40392700510884 /* DayForecastTableViewCell.m in Sources */,
+				FECEADDD1A40352C00510884 /* AFSecurityPolicy.m in Sources */,
+				FECEADDB1A40352C00510884 /* AFHTTPSessionManager.m in Sources */,
+				FECEADDF1A40352C00510884 /* AFURLRequestSerialization.m in Sources */,
+				FECEADE11A40352C00510884 /* AFURLSessionManager.m in Sources */,
 				FECEADA51A40313400510884 /* AppDelegate.m in Sources */,
 				FECEADA21A40313400510884 /* main.m in Sources */,
 			);

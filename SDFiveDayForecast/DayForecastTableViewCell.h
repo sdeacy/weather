@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface DayForecastTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *iconImage;
+@property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
+@property (weak, nonatomic) IBOutlet UILabel *windLabel;
+@property (weak, nonatomic) IBOutlet UILabel *humidityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dayDateLabel;
 
 @end
