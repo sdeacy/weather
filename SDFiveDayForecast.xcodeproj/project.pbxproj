@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FECEADA21A40313400510884 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA11A40313400510884 /* main.m */; };
+		FECEADA51A40313400510884 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA41A40313400510884 /* AppDelegate.m */; };
+		FECEADA81A40313400510884 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA71A40313400510884 /* ViewController.m */; };
+		FECEADAB1A40313500510884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECEADA91A40313500510884 /* Main.storyboard */; };
+		FECEADAD1A40313500510884 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FECEADAC1A40313500510884 /* Images.xcassets */; };
+		FECEADB01A40313500510884 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECEADAE1A40313500510884 /* LaunchScreen.xib */; };
+		FECEADBC1A40313500510884 /* SDFiveDayForecastTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADBB1A40313500510884 /* SDFiveDayForecastTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FECEADB61A40313500510884 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FECEAD941A40313400510884 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FECEAD9B1A40313400510884;
+			remoteInfo = SDFiveDayForecast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FECEAD9C1A40313400510884 /* SDFiveDayForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDFiveDayForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FECEADA01A40313400510884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FECEADA11A40313400510884 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FECEADA31A40313400510884 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FECEADA41A40313400510884 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FECEADA61A40313400510884 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FECEADA71A40313400510884 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FECEADAA1A40313500510884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FECEADAC1A40313500510884 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FECEADAF1A40313500510884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		FECEADB51A40313500510884 /* SDFiveDayForecastTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SDFiveDayForecastTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FECEADBA1A40313500510884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FECEADBB1A40313500510884 /* SDFiveDayForecastTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDFiveDayForecastTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FECEAD991A40313400510884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FECEADB21A40313500510884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FECEAD931A40313400510884 = {
+			isa = PBXGroup;
+			children = (
+				FECEAD9E1A40313400510884 /* SDFiveDayForecast */,
+				FECEADB81A40313500510884 /* SDFiveDayForecastTests */,
+				FECEAD9D1A40313400510884 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FECEAD9D1A40313400510884 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FECEAD9C1A40313400510884 /* SDFiveDayForecast.app */,
+				FECEADB51A40313500510884 /* SDFiveDayForecastTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FECEAD9E1A40313400510884 /* SDFiveDayForecast */ = {
+			isa = PBXGroup;
+			children = (
+				FECEADA31A40313400510884 /* AppDelegate.h */,
+				FECEADA41A40313400510884 /* AppDelegate.m */,
+				FECEADA61A40313400510884 /* ViewController.h */,
+				FECEADA71A40313400510884 /* ViewController.m */,
+				FECEADA91A40313500510884 /* Main.storyboard */,
+				FECEADAC1A40313500510884 /* Images.xcassets */,
+				FECEADAE1A40313500510884 /* LaunchScreen.xib */,
+				FECEAD9F1A40313400510884 /* Supporting Files */,
+			);
+			path = SDFiveDayForecast;
+			sourceTree = "<group>";
+		};
+		FECEAD9F1A40313400510884 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FECEADA01A40313400510884 /* Info.plist */,
+				FECEADA11A40313400510884 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FECEADB81A40313500510884 /* SDFiveDayForecastTests */ = {
+			isa = PBXGroup;
+			children = (
+				FECEADBB1A40313500510884 /* SDFiveDayForecastTests.m */,
+				FECEADB91A40313500510884 /* Supporting Files */,
+			);
+			path = SDFiveDayForecastTests;
+			sourceTree = "<group>";
+		};
+		FECEADB91A40313500510884 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FECEADBA1A40313500510884 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FECEAD9B1A40313400510884 /* SDFiveDayForecast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FECEADBF1A40313500510884 /* Build configuration list for PBXNativeTarget "SDFiveDayForecast" */;
+			buildPhases = (
+				FECEAD981A40313400510884 /* Sources */,
+				FECEAD991A40313400510884 /* Frameworks */,
+				FECEAD9A1A40313400510884 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SDFiveDayForecast;
+			productName = SDFiveDayForecast;
+			productReference = FECEAD9C1A40313400510884 /* SDFiveDayForecast.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FECEADB41A40313500510884 /* SDFiveDayForecastTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FECEADC21A40313500510884 /* Build configuration list for PBXNativeTarget "SDFiveDayForecastTests" */;
+			buildPhases = (
+				FECEADB11A40313500510884 /* Sources */,
+				FECEADB21A40313500510884 /* Frameworks */,
+				FECEADB31A40313500510884 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FECEADB71A40313500510884 /* PBXTargetDependency */,
+			);
+			name = SDFiveDayForecastTests;
+			productName = SDFiveDayForecastTests;
+			productReference = FECEADB51A40313500510884 /* SDFiveDayForecastTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FECEAD941A40313400510884 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "shay deacy";
+				TargetAttributes = {
+					FECEAD9B1A40313400510884 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					FECEADB41A40313500510884 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = FECEAD9B1A40313400510884;
+					};
+				};
+			};
+			buildConfigurationList = FECEAD971A40313400510884 /* Build configuration list for PBXProject "SDFiveDayForecast" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FECEAD931A40313400510884;
+			productRefGroup = FECEAD9D1A40313400510884 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FECEAD9B1A40313400510884 /* SDFiveDayForecast */,
+				FECEADB41A40313500510884 /* SDFiveDayForecastTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FECEAD9A1A40313400510884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FECEADAB1A40313500510884 /* Main.storyboard in Resources */,
+				FECEADB01A40313500510884 /* LaunchScreen.xib in Resources */,
+				FECEADAD1A40313500510884 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FECEADB31A40313500510884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FECEAD981A40313400510884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FECEADA81A40313400510884 /* ViewController.m in Sources */,
+				FECEADA51A40313400510884 /* AppDelegate.m in Sources */,
+				FECEADA21A40313400510884 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FECEADB11A40313500510884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FECEADBC1A40313500510884 /* SDFiveDayForecastTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FECEADB71A40313500510884 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FECEAD9B1A40313400510884 /* SDFiveDayForecast */;
+			targetProxy = FECEADB61A40313500510884 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FECEADA91A40313500510884 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FECEADAA1A40313500510884 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FECEADAE1A40313500510884 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FECEADAF1A40313500510884 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FECEADBD1A40313500510884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FECEADBE1A40313500510884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FECEADC01A40313500510884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SDFiveDayForecast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FECEADC11A40313500510884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SDFiveDayForecast/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FECEADC31A40313500510884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SDFiveDayForecastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDFiveDayForecast.app/SDFiveDayForecast";
+			};
+			name = Debug;
+		};
+		FECEADC41A40313500510884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SDFiveDayForecastTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SDFiveDayForecast.app/SDFiveDayForecast";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FECEAD971A40313400510884 /* Build configuration list for PBXProject "SDFiveDayForecast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FECEADBD1A40313500510884 /* Debug */,
+				FECEADBE1A40313500510884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FECEADBF1A40313500510884 /* Build configuration list for PBXNativeTarget "SDFiveDayForecast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FECEADC01A40313500510884 /* Debug */,
+				FECEADC11A40313500510884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FECEADC21A40313500510884 /* Build configuration list for PBXNativeTarget "SDFiveDayForecastTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FECEADC31A40313500510884 /* Debug */,
+				FECEADC41A40313500510884 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FECEAD941A40313400510884 /* Project object */;
+}
