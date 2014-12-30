@@ -12,6 +12,9 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *testArr;
+@property (nonatomic, strong) NSArray *daysForecastsArray;
+@property (nonatomic, strong) NSDictionary *oneDayWeatherDictionary;
+
 
 
 

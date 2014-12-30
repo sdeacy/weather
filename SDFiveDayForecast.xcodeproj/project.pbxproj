@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE1F53CB1A51754B001925D1 /* SDCityWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */; };
 		FECEADA21A40313400510884 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA11A40313400510884 /* main.m */; };
 		FECEADA51A40313400510884 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA41A40313400510884 /* AppDelegate.m */; };
 		FECEADA81A40313400510884 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA71A40313400510884 /* ViewController.m */; };
@@ -24,6 +25,7 @@
 		FECEADE01A40352C00510884 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADD61A40352C00510884 /* AFURLResponseSerialization.m */; };
 		FECEADE11A40352C00510884 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADD81A40352C00510884 /* AFURLSessionManager.m */; };
 		FECEADE41A40392700510884 /* DayForecastTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADE31A40392700510884 /* DayForecastTableViewCell.m */; };
+		FECEAE181A40D32D00510884 /* clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = FECEAE171A40D32C00510884 /* clouds.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE1F53C91A51754A001925D1 /* SDCityWeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCityWeatherData.h; sourceTree = "<group>"; };
+		FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCityWeatherData.m; sourceTree = "<group>"; };
 		FECEAD9C1A40313400510884 /* SDFiveDayForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDFiveDayForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECEADA01A40313400510884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FECEADA11A40313400510884 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 		FECEADD81A40352C00510884 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		FECEADE21A40392700510884 /* DayForecastTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayForecastTableViewCell.h; sourceTree = "<group>"; };
 		FECEADE31A40392700510884 /* DayForecastTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayForecastTableViewCell.m; sourceTree = "<group>"; };
+		FECEAE171A40D32C00510884 /* clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +117,7 @@
 		FECEAD9E1A40313400510884 /* SDFiveDayForecast */ = {
 			isa = PBXGroup;
 			children = (
+				FECEAE171A40D32C00510884 /* clouds.png */,
 				FECEADC51A40352C00510884 /* AFNetworking */,
 				FECEADA31A40313400510884 /* AppDelegate.h */,
 				FECEADA41A40313400510884 /* AppDelegate.m */,
@@ -123,6 +129,8 @@
 				FECEAD9F1A40313400510884 /* Supporting Files */,
 				FECEADE21A40392700510884 /* DayForecastTableViewCell.h */,
 				FECEADE31A40392700510884 /* DayForecastTableViewCell.m */,
+				FE1F53C91A51754A001925D1 /* SDCityWeatherData.h */,
+				FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */,
 			);
 			path = SDFiveDayForecast;
 			sourceTree = "<group>";
@@ -262,6 +270,7 @@
 				FECEADAB1A40313500510884 /* Main.storyboard in Resources */,
 				FECEADB01A40313500510884 /* LaunchScreen.xib in Resources */,
 				FECEADAD1A40313500510884 /* Images.xcassets in Resources */,
+				FECEAE181A40D32D00510884 /* clouds.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +292,7 @@
 				FECEADA81A40313400510884 /* ViewController.m in Sources */,
 				FECEADDA1A40352C00510884 /* AFHTTPRequestOperationManager.m in Sources */,
 				FECEADDC1A40352C00510884 /* AFNetworkReachabilityManager.m in Sources */,
+				FE1F53CB1A51754B001925D1 /* SDCityWeatherData.m in Sources */,
 				FECEADE01A40352C00510884 /* AFURLResponseSerialization.m in Sources */,
 				FECEADDE1A40352C00510884 /* AFURLConnectionOperation.m in Sources */,
 				FECEADE41A40392700510884 /* DayForecastTableViewCell.m in Sources */,
@@ -482,6 +492,7 @@
 				FECEADC11A40313500510884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FECEADC21A40313500510884 /* Build configuration list for PBXNativeTarget "SDFiveDayForecastTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +501,7 @@
 				FECEADC41A40313500510884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

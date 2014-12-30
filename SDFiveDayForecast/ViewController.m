@@ -9,9 +9,9 @@
 #import "ViewController.h"
 #import "AFNetworking.h"
 #import "DayForecastTableViewCell.h"
+#import "SDCityWeatherData.h"
 
 @interface ViewController ()
-@property (nonatomic, strong) NSArray *daysForecastsArray;
 
 @end
 
@@ -29,6 +29,8 @@
 //        @"temp":@{@"day":@277.95},
 //      },
 //    nil];
+    self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"clouds.png"]];
+
  
      [_tableView reloadData];
 }
@@ -40,7 +42,7 @@
 
 -(void)getData{
     NSLog(@"%@",@"getting.....");
-    NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=5&mode=json&q=", @"paris"];
+    NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=6&mode=json&q=", @"paris"];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:searchCityURL
       parameters:nil
@@ -78,15 +80,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     DayForecastTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DayForecastCell"];
     
-    NSNumber *dateUnixTime = [_daysForecastsArray objectAtIndex:[indexPath row]][@"dt"];
-    NSLog(@"%@",dateUnixTime);
-    NSTimeInterval _interval=dateUnixTime.intValue;
-    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
-    NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
-    [formatter setLocale:[NSLocale currentLocale]];
-    [formatter setDateFormat:@"dd.MM.yyyy"];
-    NSString *dateFromDT= [formatter stringFromDate:date];
-    cell.dayDateLabel.text = dateFromDT;
+    SDCityWeatherData *cityWeatherData = [[SDCityWeatherData  alloc]init];
+    [cityWeatherData setWeatherDataDictionary:[_daysForecastsArray objectAtIndex:[indexPath row]]];
+   // NSDictionary *oneDayWeatherDictionary = [[NSDictionary alloc] initWithDictionary:[_daysForecastsArray objectAtIndex:[indexPath row]]];
+    
+    cell.dayDateLabel.text = [cityWeatherData date];
     
     NSNumber *humidity = [_daysForecastsArray objectAtIndex:[indexPath row]][@"humidity"];
     NSLog(@"humidity: %f%%",ceil([humidity intValue]));
