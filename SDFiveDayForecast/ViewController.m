@@ -42,7 +42,7 @@
 
 -(void)getData{
     NSLog(@"%@",@"getting.....");
-    NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=6&mode=json&q=", @"paris"];
+    NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=6&mode=json&q=", @"cork"];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:searchCityURL
       parameters:nil
@@ -70,44 +70,21 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    NSLog(@"%lu", (unsigned long)[_testArr count]);
     return [_daysForecastsArray count];
 }
 
-// Row display. Implementers should *always* try to reuse cells by setting each cell's reuseIdentifier and querying for available reusable cells with dequeueReusableCellWithIdentifier:
-// Cell gets various attributes set automatically based on table (separators) and data source (accessory views, editing controls)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     DayForecastTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DayForecastCell"];
-    
     SDCityWeatherData *cityWeatherData = [[SDCityWeatherData  alloc]init];
     [cityWeatherData setWeatherDataDictionary:[_daysForecastsArray objectAtIndex:[indexPath row]]];
-   // NSDictionary *oneDayWeatherDictionary = [[NSDictionary alloc] initWithDictionary:[_daysForecastsArray objectAtIndex:[indexPath row]]];
-    
-    cell.dayDateLabel.text = [cityWeatherData date];
-    
-    NSNumber *humidity = [_daysForecastsArray objectAtIndex:[indexPath row]][@"humidity"];
-    NSLog(@"humidity: %f%%",ceil([humidity intValue]));
-    cell.humidityLabel.text = [NSString stringWithFormat:@"%f%%",ceil([humidity intValue])];
-    
-    NSNumber *wind = [_daysForecastsArray objectAtIndex:[indexPath row]][@"speed"];
-    cell.windLabel.text = [NSString stringWithFormat:@"%@mps",[wind stringValue]];
-    
-    NSDictionary *temperatureDictionary = [_daysForecastsArray objectAtIndex:[indexPath row]][@"temp"];
-    NSNumber *temperatureDay = [temperatureDictionary objectForKey:@"day"];
-    int tempCelsius = ceil([temperatureDay floatValue]- 273.51);
-    NSLog(@"%d",tempCelsius);
-    cell.temperatureLabel.text = [NSString stringWithFormat:@"%dc",tempCelsius];
-    
-    NSArray *weatherArray = [_daysForecastsArray objectAtIndex:[indexPath row]][@"weather"];
-    NSString *icon = weatherArray[0][@"icon"];
-    NSString *baseURL = @"http://openweathermap.org/img/w/";
-    NSURL *imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",baseURL,icon,@".png"]];
-    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-    cell.imageView.image = [UIImage imageWithData:imageData];
-
-    
+    cell.dayDateLabel.text      =   [cityWeatherData date];
+    cell.humidityLabel.text     =   [cityWeatherData humidityPerCent];
+    cell.windLabel.text         =   [cityWeatherData windSpeedMPS];
+    cell.temperatureLabel.text  =   [cityWeatherData temperatureCelsius];
+    cell.imageView.image        =   [cityWeatherData buildIconURL];
     return cell;
+    
 }
 
 

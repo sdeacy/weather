@@ -17,24 +17,23 @@
 }
 
 -(NSString*)temperatureCelsius{
-    //todo - tidy
-    float conversionKelvinToCelsius = 273.15;
-    float temperatureCelsius = [_temperature floatValue]- conversionKelvinToCelsius;
-    float rounded = ceilf(temperatureCelsius);
-    NSNumber *tempCel = [NSNumber numberWithFloat:rounded];
     
-    return tempCel.stringValue;
+    NSDictionary *temperatureDictionary = _weatherDataDictionary[@"temp"];
+    NSNumber *temperatureDay = [temperatureDictionary objectForKey:@"day"];
+    int tempCelsius = ceil([temperatureDay floatValue]- 273.51);
+    NSLog(@"%d",tempCelsius);
+    return [NSString stringWithFormat:@"%dC",tempCelsius];
     
 }
 
 -(UIImage*)buildIconURL{
     
-    NSString *baseURL = @"http://openweathermap.org/img/w/";
-    NSURL *imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",baseURL,_icon,@".png"]];
-    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-    
+    NSArray     *weatherArray   = _weatherDataDictionary[@"weather"];
+    NSString    *icon           = weatherArray[0][@"icon"];
+    NSString    *baseURL        = @"http://openweathermap.org/img/w/";
+    NSURL       *imageURL       = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@%@",baseURL,icon,@".png"]];
+    NSData      *imageData      = [NSData dataWithContentsOfURL:imageURL];
     return [UIImage imageWithData:imageData];
-    
 }
 
 -(NSString*)date{
@@ -48,8 +47,17 @@
     [formatter setDateFormat:@"dd.MM.yyyy"];
     NSString *dateString = [formatter stringFromDate:date];
     return dateString;
-    
 }
+
+-(NSString*)humidityPerCent{
+    _humidityPerCent = _weatherDataDictionary[@"humidity"];
+    return [NSString stringWithFormat:@"%d%%",[_humidityPerCent intValue]];
+}
+-(NSString *)     windSpeedMPS{
+    return [NSString stringWithFormat:@"%d m/sec",[_weatherDataDictionary[@"speed"] intValue]];
+}
+
+
 
 
 
