@@ -22,9 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _searchCity = @"dublin";
-    [self getData];
-    
+    _searchCity = @"dublin";            //default city is Dublin.
+    [self getData];                     //loads data from web
     
 }
 
@@ -34,20 +33,22 @@
 }
 
 
+//activates search for another city, after user has type city name in
 - (IBAction)searchButton:(id)sender {
-    
     _searchCity = _searchTextField.text;
-    [_searchTextField resignFirstResponder];
-    NSLog(@"%@",_searchCity);
+    [_searchTextField resignFirstResponder];                //removes keyboard
     [self getData];
     
 }
 
+
+//
 -(void)buildUI{
     
     SDCityWeatherData *cityWeatherData = [[SDCityWeatherData  alloc]init];
     [cityWeatherData setWeatherDataDictionary:[_daysForecastsArray objectAtIndex:0]];
-    _cityNameLabel.text     =  _searchCity;
+    [cityWeatherData setCityDataDictionary:_cityDataDictionary];
+    _cityNameLabel.text     =  [cityWeatherData cityName];
     _temperatureLabel.text  = [cityWeatherData temperatureCelsius];
     _humidityLabel.text     = [cityWeatherData humidityPerCent];
     _windSpeedLabel.text    = [cityWeatherData windSpeedMPS];
@@ -57,7 +58,7 @@
 
 -(void)getData{
     NSLog(@"%@",@"getting.....");
-    NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=6&mode=json&q=", _searchCity];
+    NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=5&mode=json&q=", _searchCity];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:searchCityURL
       parameters:nil
@@ -66,6 +67,8 @@
              NSDictionary *returnedData = (NSDictionary*)responseObject;
              if ([returnedData[@"cod"]  isEqual: @"200"]) {
                  _daysForecastsArray = returnedData[@"list"];
+                 _cityDataDictionary = returnedData[@"city"];
+                 
              }
              else if ([returnedData[@"cod"]  isEqual: @"404"]){
                  NSLog(@"%@",@"404");

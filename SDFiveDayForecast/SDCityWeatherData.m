@@ -55,6 +55,10 @@
     return [NSString stringWithFormat:@"%d m/sec",[_weatherDataDictionary[@"speed"] intValue]];
 }
 
+-(NSString *)cityName;{
+    return _cityDataDictionary[@"name"];
+}
+
 
 
 

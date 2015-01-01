@@ -13,6 +13,7 @@
 @interface SDCityWeatherData : NSObject
 
 @property (nonatomic,strong) NSDictionary   *weatherDataDictionary;
+@property (nonatomic,strong) NSDictionary   *cityDataDictionary;
 @property (nonatomic,strong) NSString       *cityName;
 @property (nonatomic,strong) NSNumber       *temperature;
 @property (nonatomic,strong) NSString       *windSpeedMPS;
@@ -23,11 +24,12 @@
 
 
 
--(NSString *)     temperatureCelsius;
--(UIImage  *)     buildIconURL;
--(NSString *)     date;
--(NSString *)     humidityPerCent;
--(NSString *)     windSpeedMPS;
+-(NSString *)temperatureCelsius;
+-(UIImage  *)buildIconURL;
+-(NSString *)date;
+-(NSString *)humidityPerCent;
+-(NSString *)windSpeedMPS;
+-(NSString *)cityName;
 
 
 
