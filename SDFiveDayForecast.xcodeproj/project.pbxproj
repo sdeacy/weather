@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE1F53CB1A51754B001925D1 /* SDCityWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */; };
+		FECC6B921A547123003B6EB3 /* rootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FECC6B911A547123003B6EB3 /* rootViewController.m */; };
 		FECEADA21A40313400510884 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA11A40313400510884 /* main.m */; };
 		FECEADA51A40313400510884 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA41A40313400510884 /* AppDelegate.m */; };
 		FECEADA81A40313400510884 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA71A40313400510884 /* ViewController.m */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		FE1F53C91A51754A001925D1 /* SDCityWeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCityWeatherData.h; sourceTree = "<group>"; };
 		FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCityWeatherData.m; sourceTree = "<group>"; };
+		FECC6B901A547123003B6EB3 /* rootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootViewController.h; sourceTree = "<group>"; };
+		FECC6B911A547123003B6EB3 /* rootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rootViewController.m; sourceTree = "<group>"; };
 		FECEAD9C1A40313400510884 /* SDFiveDayForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDFiveDayForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECEADA01A40313400510884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FECEADA11A40313400510884 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -131,6 +134,8 @@
 				FECEADE31A40392700510884 /* DayForecastTableViewCell.m */,
 				FE1F53C91A51754A001925D1 /* SDCityWeatherData.h */,
 				FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */,
+				FECC6B901A547123003B6EB3 /* rootViewController.h */,
+				FECC6B911A547123003B6EB3 /* rootViewController.m */,
 			);
 			path = SDFiveDayForecast;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				FECEADDF1A40352C00510884 /* AFURLRequestSerialization.m in Sources */,
 				FECEADE11A40352C00510884 /* AFURLSessionManager.m in Sources */,
 				FECEADA51A40313400510884 /* AppDelegate.m in Sources */,
+				FECC6B921A547123003B6EB3 /* rootViewController.m in Sources */,
 				FECEADA21A40313400510884 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

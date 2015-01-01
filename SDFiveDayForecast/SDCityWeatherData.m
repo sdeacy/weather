@@ -21,7 +21,6 @@
     NSDictionary *temperatureDictionary = _weatherDataDictionary[@"temp"];
     NSNumber *temperatureDay = [temperatureDictionary objectForKey:@"day"];
     int tempCelsius = ceil([temperatureDay floatValue]- 273.51);
-    NSLog(@"%d",tempCelsius);
     return [NSString stringWithFormat:@"%dC",tempCelsius];
     
 }
@@ -39,7 +38,6 @@
 -(NSString*)date{
     
     NSNumber *dateUnixTime = _weatherDataDictionary[@"dt"];
-    NSLog(@"%@",dateUnixTime);
     NSTimeInterval _interval=dateUnixTime.intValue;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
     NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
