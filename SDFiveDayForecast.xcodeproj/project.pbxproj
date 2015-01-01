@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FE1F53CB1A51754B001925D1 /* SDCityWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */; };
 		FECC6B921A547123003B6EB3 /* rootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FECC6B911A547123003B6EB3 /* rootViewController.m */; };
+		FECC6B941A55CE8B003B6EB3 /* toolbar_find.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC6B931A55CE8B003B6EB3 /* toolbar_find.png */; };
 		FECEADA21A40313400510884 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA11A40313400510884 /* main.m */; };
 		FECEADA51A40313400510884 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA41A40313400510884 /* AppDelegate.m */; };
 		FECEADA81A40313400510884 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA71A40313400510884 /* ViewController.m */; };
@@ -44,6 +45,7 @@
 		FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCityWeatherData.m; sourceTree = "<group>"; };
 		FECC6B901A547123003B6EB3 /* rootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootViewController.h; sourceTree = "<group>"; };
 		FECC6B911A547123003B6EB3 /* rootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rootViewController.m; sourceTree = "<group>"; };
+		FECC6B931A55CE8B003B6EB3 /* toolbar_find.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolbar_find.png; sourceTree = "<group>"; };
 		FECEAD9C1A40313400510884 /* SDFiveDayForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDFiveDayForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECEADA01A40313400510884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FECEADA11A40313400510884 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				FECEAE171A40D32C00510884 /* clouds.png */,
+				FECC6B931A55CE8B003B6EB3 /* toolbar_find.png */,
 				FECEADC51A40352C00510884 /* AFNetworking */,
 				FECEADA31A40313400510884 /* AppDelegate.h */,
 				FECEADA41A40313400510884 /* AppDelegate.m */,
@@ -272,6 +275,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FECC6B941A55CE8B003B6EB3 /* toolbar_find.png in Resources */,
 				FECEADAB1A40313500510884 /* Main.storyboard in Resources */,
 				FECEADB01A40313500510884 /* LaunchScreen.xib in Resources */,
 				FECEADAD1A40313500510884 /* Images.xcassets in Resources */,

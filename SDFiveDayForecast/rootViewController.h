@@ -12,7 +12,13 @@
 @property (nonatomic, strong) NSArray *daysForecastsArray;
 @property (nonatomic, strong) NSDictionary *oneDayWeatherDictionary;
 
+@property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *temperatureLabel;
+@property (weak, nonatomic) IBOutlet UILabel *humidityLabel;
+@property (weak, nonatomic) IBOutlet UILabel *windSpeedLabel;
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet UIImageView *iconImageView;
+- (IBAction)searchButton:(id)sender;
 
-
-
+-(void)buildUI;
 @end

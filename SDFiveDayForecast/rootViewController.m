@@ -14,6 +14,7 @@
 
 
 @interface rootViewController ()
+@property (nonatomic,strong) NSString *searchCity;
 
 @end
 
@@ -21,8 +22,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _searchCity = @"dublin";
     [self getData];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,9 +33,31 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (IBAction)searchButton:(id)sender {
+    
+    _searchCity = _searchTextField.text;
+    [_searchTextField resignFirstResponder];
+    NSLog(@"%@",_searchCity);
+    [self getData];
+    
+}
+
+-(void)buildUI{
+    
+    SDCityWeatherData *cityWeatherData = [[SDCityWeatherData  alloc]init];
+    [cityWeatherData setWeatherDataDictionary:[_daysForecastsArray objectAtIndex:0]];
+    _cityNameLabel.text     =  _searchCity;
+    _temperatureLabel.text  = [cityWeatherData temperatureCelsius];
+    _humidityLabel.text     = [cityWeatherData humidityPerCent];
+    _windSpeedLabel.text    = [cityWeatherData windSpeedMPS];
+    _iconImageView.image    = [cityWeatherData buildIconURL];
+    
+}
+
 -(void)getData{
     NSLog(@"%@",@"getting.....");
-    NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=6&mode=json&q=", @"cork"];
+    NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=6&mode=json&q=", _searchCity];
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:searchCityURL
       parameters:nil
@@ -44,9 +69,13 @@
              }
              else if ([returnedData[@"cod"]  isEqual: @"404"]){
                  NSLog(@"%@",@"404");
+                 _cityNameLabel.text  = @"City not found, try again";
+
              }
              NSLog(@"_daysForecastsArray: %lu", (unsigned long)[_daysForecastsArray count]);
  //            [_tableView reloadData];
+             [self buildUI];
+             
              
              
          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
@@ -63,6 +92,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     ViewController *transferViewController = [segue destinationViewController];
+    transferViewController.daysForecastsArray = _daysForecastsArray;
     
 }
 
