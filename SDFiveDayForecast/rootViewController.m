@@ -11,6 +11,7 @@
 #import "AFNetworking.h"
 #import "DayForecastTableViewCell.h"
 #import "SDCityWeatherData.h"
+#import <QuartzCore/QuartzCore.h>
 
 
 @interface rootViewController ()
@@ -22,8 +23,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _searchCity = @"dublin";            //default city is Dublin.
-    [self getData];                     //loads data from web
+    _searchCity = @"dublin,ie";            //default city is Dublin.
+    [self getData];                      //loads data from web
+    
+    UIGraphicsBeginImageContext(self.view.frame.size);          //ref http://stackoverflow.com/questions/8077740/how-to-fill-background-image-of-an-uiview
+    [[UIImage imageNamed:@"dublin-bridge2.jpg"] drawInRect:self.view.bounds];
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    // end ref
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:image]];
+    //self.view.layer.cornerRadius = self.view.frame.size.height;
+    //self.view.clipsToBounds = YES;
+    
+
     
 }
 
