@@ -56,7 +56,7 @@
 }
 
 -(NSString *)cityName;{
-    return _cityDataDictionary[@"name"];
+    return [NSString stringWithFormat:@"%@, %@",_cityDataDictionary[@"name"],_cityDataDictionary[@"country"]];
 }
 
 

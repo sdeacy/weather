@@ -55,7 +55,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ODu-Pz-tck">
-                                <rect key="frame" x="16" y="137" width="288" height="33"/>
+                                <rect key="frame" x="16" y="143" width="288" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -91,6 +91,13 @@
                                 <rect key="frame" x="113" y="178" width="95" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9OE-GW-Hhz">
+                                <rect key="frame" x="16" y="112" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -99,6 +106,7 @@
                         <outlet property="cityNameLabel" destination="ODu-Pz-tck" id="xXm-Rt-Z9k"/>
                         <outlet property="humidityLabel" destination="gSS-UH-5ra" id="Q4m-d1-syA"/>
                         <outlet property="iconImageView" destination="PqX-nt-VVS" id="0v6-Re-d66"/>
+                        <outlet property="searchMessageLabel" destination="9OE-GW-Hhz" id="Avc-84-qVA"/>
                         <outlet property="searchTextField" destination="Pyi-Fb-T7K" id="pNj-G4-ekH"/>
                         <outlet property="temperatureLabel" destination="pfd-pE-WyL" id="aF2-Ur-LPJ"/>
                         <outlet property="windSpeedLabel" destination="N8M-Uy-Pfw" id="yxH-ZT-6r4"/>

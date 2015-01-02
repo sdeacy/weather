@@ -33,22 +33,30 @@
 }
 
 
-//activates search for another city, after user has type city name in
+//activates search for another city, after user entered city name
 - (IBAction)searchButton:(id)sender {
-    _searchCity = _searchTextField.text;
+    _searchMessageLabel.text = @"";
+    NSString *userInput = _searchTextField.text;
+    NSString *trimmedUserInput = [userInput stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    trimmedUserInput = [trimmedUserInput stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+    NSLog(@"trimmed: %@",trimmedUserInput);
+    //ref http://stackoverflow.com/questions/9291624/how-do-i-remove-leading-trailing-whitespace-of-nsstring-inside-an-nsarray
+    
+    
+    _searchCity = trimmedUserInput;
     [_searchTextField resignFirstResponder];                //removes keyboard
     [self getData];
-    
 }
+
 
 
 //
 -(void)buildUI{
-    
+    _searchMessageLabel.text  = @" ";
     SDCityWeatherData *cityWeatherData = [[SDCityWeatherData  alloc]init];
     [cityWeatherData setWeatherDataDictionary:[_daysForecastsArray objectAtIndex:0]];
     [cityWeatherData setCityDataDictionary:_cityDataDictionary];
-    _cityNameLabel.text     =  [cityWeatherData cityName];
+    _cityNameLabel.text     = [cityWeatherData cityName];
     _temperatureLabel.text  = [cityWeatherData temperatureCelsius];
     _humidityLabel.text     = [cityWeatherData humidityPerCent];
     _windSpeedLabel.text    = [cityWeatherData windSpeedMPS];
@@ -58,7 +66,11 @@
 
 -(void)getData{
     NSLog(@"%@",@"getting.....");
-    NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=5&mode=json&q=", _searchCity];
+    _searchMessageLabel.text  = @"Getting data...";
+   // http://api.openweathermap.org/data/2.5/weather?q=London,uk
+
+    NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=5&mode=json&APPID=91b6d62cbff687d9e5bff155939d33e0&type=accurate&q=", _searchCity];
+    NSLog(@"%@",searchCityURL);
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:searchCityURL
       parameters:nil
@@ -72,7 +84,7 @@
              }
              else if ([returnedData[@"cod"]  isEqual: @"404"]){
                  NSLog(@"%@",@"404");
-                 _cityNameLabel.text  = @"City not found, try again";
+                 _searchMessageLabel.text  = @"City not found, try again";
 
              }
              NSLog(@"_daysForecastsArray: %lu", (unsigned long)[_daysForecastsArray count]);
@@ -83,6 +95,7 @@
              
          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
              NSLog(@"%@",@"Error getting data");
+             _searchMessageLabel.text  = @"City not found, try again";
          }];
     
 }

@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UILabel        *windSpeedLabel;
 @property (weak, nonatomic) IBOutlet UITextField    *searchTextField;
 @property (weak, nonatomic) IBOutlet UIImageView    *iconImageView;
+@property (weak, nonatomic) IBOutlet UILabel        *searchMessageLabel;
 
 - (IBAction)searchButton:(id)sender;
 -(void)buildUI;
