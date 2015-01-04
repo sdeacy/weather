@@ -20,7 +20,11 @@
 @property (weak, nonatomic) IBOutlet UITextField    *searchTextField;
 @property (weak, nonatomic) IBOutlet UIImageView    *iconImageView;
 @property (weak, nonatomic) IBOutlet UILabel        *searchMessageLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
+@property (weak, nonatomic) IBOutlet UILabel *conditionsDescriptionLabel;
+
 
 - (IBAction)searchButton:(id)sender;
 -(void)buildUI;
+-(void)getData;
 @end

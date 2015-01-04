@@ -29,7 +29,9 @@
 -(NSString *)date;
 -(NSString *)humidityPerCent;
 -(NSString *)windSpeedMPS;
+-(id)windDirection;
 -(NSString *)cityName;
+-(NSString *)conditionsDescription;
 
 
 

@@ -25,18 +25,9 @@
     [super viewDidLoad];
     _searchCity = @"dublin,ie";            //default city is Dublin.
     [self getData];                      //loads data from web
-    
-    UIGraphicsBeginImageContext(self.view.frame.size);          //ref http://stackoverflow.com/questions/8077740/how-to-fill-background-image-of-an-uiview
-    [[UIImage imageNamed:@"dublin-bridge2.jpg"] drawInRect:self.view.bounds];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    // end ref
-    [self.view setBackgroundColor:[UIColor colorWithPatternImage:image]];
-    //self.view.layer.cornerRadius = self.view.frame.size.height;
-    //self.view.clipsToBounds = YES;
-    
-
-    
+    [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"clouds.png"]]];
+    self.backgroundImageView.layer.cornerRadius = 115;
+    self.iconImageView.layer.cornerRadius = 45;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,8 +44,6 @@
     trimmedUserInput = [trimmedUserInput stringByReplacingOccurrencesOfString:@" " withString:@"_"];
     NSLog(@"trimmed: %@",trimmedUserInput);
     //ref http://stackoverflow.com/questions/9291624/how-do-i-remove-leading-trailing-whitespace-of-nsstring-inside-an-nsarray
-    
-    
     _searchCity = trimmedUserInput;
     [_searchTextField resignFirstResponder];                //removes keyboard
     [self getData];
@@ -64,6 +53,7 @@
 
 //
 -(void)buildUI{
+    
     _searchMessageLabel.text  = @" ";
     SDCityWeatherData *cityWeatherData = [[SDCityWeatherData  alloc]init];
     [cityWeatherData setWeatherDataDictionary:[_daysForecastsArray objectAtIndex:0]];
@@ -71,10 +61,15 @@
     _cityNameLabel.text     = [cityWeatherData cityName];
     _temperatureLabel.text  = [cityWeatherData temperatureCelsius];
     _humidityLabel.text     = [cityWeatherData humidityPerCent];
-    _windSpeedLabel.text    = [cityWeatherData windSpeedMPS];
+    _windSpeedLabel.text    = [NSString stringWithFormat:@"%@ %@",[cityWeatherData windSpeedMPS],[cityWeatherData windDirection]];
+    _conditionsDescriptionLabel.text = [cityWeatherData conditionsDescription];
     _iconImageView.image    = [cityWeatherData buildIconURL];
     
 }
+
+
+
+
 
 -(void)getData{
     NSLog(@"%@",@"getting.....");
@@ -120,7 +115,7 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     ViewController *transferViewController = [segue destinationViewController];
-    transferViewController.daysForecastsArray = _daysForecastsArray;
+    transferViewController.searchCity = _searchCity;
     
 }
 

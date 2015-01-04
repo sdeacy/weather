@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FE1F53CB1A51754B001925D1 /* SDCityWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */; };
+		FE464DFC1A59A4FB0089A847 /* woodenWalkway.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE464DFB1A59A4FB0089A847 /* woodenWalkway.jpg */; };
+		FE464DFE1A59A8900089A847 /* pier.png in Resources */ = {isa = PBXBuildFile; fileRef = FE464DFD1A59A8900089A847 /* pier.png */; };
 		FECC6B921A547123003B6EB3 /* rootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FECC6B911A547123003B6EB3 /* rootViewController.m */; };
 		FECC6B941A55CE8B003B6EB3 /* toolbar_find.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC6B931A55CE8B003B6EB3 /* toolbar_find.png */; };
 		FECC6B961A57383E003B6EB3 /* dublin-bridge2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FECC6B951A57383E003B6EB3 /* dublin-bridge2.jpg */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		FE1F53C91A51754A001925D1 /* SDCityWeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCityWeatherData.h; sourceTree = "<group>"; };
 		FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCityWeatherData.m; sourceTree = "<group>"; };
+		FE464DFB1A59A4FB0089A847 /* woodenWalkway.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = woodenWalkway.jpg; sourceTree = "<group>"; };
+		FE464DFD1A59A8900089A847 /* pier.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pier.png; sourceTree = "<group>"; };
 		FECC6B901A547123003B6EB3 /* rootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootViewController.h; sourceTree = "<group>"; };
 		FECC6B911A547123003B6EB3 /* rootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rootViewController.m; sourceTree = "<group>"; };
 		FECC6B931A55CE8B003B6EB3 /* toolbar_find.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolbar_find.png; sourceTree = "<group>"; };
@@ -130,12 +134,14 @@
 			children = (
 				FECEAE171A40D32C00510884 /* clouds.png */,
 				FECC6B951A57383E003B6EB3 /* dublin-bridge2.jpg */,
+				FE464DFD1A59A8900089A847 /* pier.png */,
+				FE464DFB1A59A4FB0089A847 /* woodenWalkway.jpg */,
 				FECC6B991A573B98003B6EB3 /* brown-blue-clouds.jpeg */,
 				FECC6B971A5739EC003B6EB3 /* dublin-rain.jpeg */,
 				FECC6B931A55CE8B003B6EB3 /* toolbar_find.png */,
 				FECEADC51A40352C00510884 /* AFNetworking */,
-				FECEADA31A40313400510884 /* AppDelegate.h */,
 				FECEADA41A40313400510884 /* AppDelegate.m */,
+				FECEADA31A40313400510884 /* AppDelegate.h */,
 				FECEADA61A40313400510884 /* ViewController.h */,
 				FECEADA71A40313400510884 /* ViewController.m */,
 				FECEADA91A40313500510884 /* Main.storyboard */,
@@ -285,10 +291,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FECC6B941A55CE8B003B6EB3 /* toolbar_find.png in Resources */,
+				FE464DFE1A59A8900089A847 /* pier.png in Resources */,
 				FECEADAB1A40313500510884 /* Main.storyboard in Resources */,
 				FECC6B981A5739EC003B6EB3 /* dublin-rain.jpeg in Resources */,
 				FECEADB01A40313500510884 /* LaunchScreen.xib in Resources */,
 				FECEADAD1A40313500510884 /* Images.xcassets in Resources */,
+				FE464DFC1A59A4FB0089A847 /* woodenWalkway.jpg in Resources */,
 				FECEAE181A40D32D00510884 /* clouds.png in Resources */,
 				FECC6B9A1A573B98003B6EB3 /* brown-blue-clouds.jpeg in Resources */,
 				FECC6B961A57383E003B6EB3 /* dublin-bridge2.jpg in Resources */,

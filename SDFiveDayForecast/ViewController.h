@@ -15,6 +15,11 @@
 @property (nonatomic, strong) NSArray *daysForecastsArray;
 @property (nonatomic, strong) NSDictionary *oneDayWeatherDictionary;
 
+@property (nonatomic, strong) NSString *searchCity;
+
+@property (weak, nonatomic) IBOutlet UILabel *cityNameLabel;
+@property (nonatomic, strong)NSDictionary *cityDataDictionary;
+
 
 
 
