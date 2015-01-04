@@ -19,19 +19,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    //[self getData];
-//    _daysForecastsArray = [[NSMutableArray alloc]initWithObjects:
-//    @{@"dt":@1418608800,
-//        @"temp":@{@"day":@270.88},
-//    },
-//    @{@"dt":@1418695200,
-//        @"temp":@{@"day":@277.95},
-//      },
-//    nil];
     self.tableView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"clouds.png"]];
-     [_tableView reloadData];
-    
+    [self getData];
+    [_tableView reloadData];
     
 }
 
@@ -40,30 +30,41 @@
     // Dispose of any resources that can be recreated.
 }
 
-//-(void)getData{
-//    NSLog(@"%@",@"getting.....");
-//    NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=6&mode=json&q=", @"dublin"];
-//    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-//    [manager GET:searchCityURL
-//      parameters:nil
-//         success:^(AFHTTPRequestOperation *operation, id responseObject) {
-//             NSLog(@"got data...");
-//             NSDictionary *returnedData = (NSDictionary*)responseObject;
-//             if ([returnedData[@"cod"]  isEqual: @"200"]) {
-//                  _daysForecastsArray = returnedData[@"list"];
-//             }
-//             else if ([returnedData[@"cod"]  isEqual: @"404"]){
-//                NSLog(@"%@",@"404");
-//             }
-//             NSLog(@"_daysForecastsArray: %lu", (unsigned long)[_daysForecastsArray count]);
-//             [_tableView reloadData];
-//
-//
-//         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-//             NSLog(@"%@",@"Error getting data");
-//         }];
-//    
-//}
+-(void)getData{
+    NSLog(@"%@",@"getting.....");
+    // http://api.openweathermap.org/data/2.5/weather?q=London,uk
+    
+    NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=5&mode=json&APPID=91b6d62cbff687d9e5bff155939d33e0&type=accurate&q=", _searchCity];
+    NSLog(@"%@",searchCityURL);
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:searchCityURL
+      parameters:nil
+         success:^(AFHTTPRequestOperation *operation, id responseObject) {
+             NSLog(@"got data...");
+             NSDictionary *returnedData = (NSDictionary*)responseObject;
+             if ([returnedData[@"cod"]  isEqual: @"200"]) {
+                 _daysForecastsArray = returnedData[@"list"];
+                 _cityDataDictionary = returnedData[@"city"];
+                 
+             }
+             else if ([returnedData[@"cod"]  isEqual: @"404"]){
+                 NSLog(@"%@",@"404");
+                 
+             }
+             NSLog(@"_daysForecastsArray: %lu", (unsigned long)[_daysForecastsArray count]);
+           [_tableView reloadData];
+             self.navigationItem.title = [NSString stringWithFormat:@"%@ %@",_cityDataDictionary[@"name"],_cityDataDictionary[@"country"]];
+
+             
+             
+             
+         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+             NSLog(@"%@",@"Error getting data");
+         //    _searchMessageLabel.text  = @"City not found, try again";
+         }];
+    
+}
+
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 1;

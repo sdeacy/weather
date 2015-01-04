@@ -52,11 +52,28 @@
     return [NSString stringWithFormat:@"%d%%",[_humidityPerCent intValue]];
 }
 -(NSString *)     windSpeedMPS{
-    return [NSString stringWithFormat:@"%d m/sec",[_weatherDataDictionary[@"speed"] intValue]];
+    return [NSString stringWithFormat:@"%d m/s",[_weatherDataDictionary[@"speed"] intValue]];
 }
 
 -(NSString *)cityName;{
     return [NSString stringWithFormat:@"%@, %@",_cityDataDictionary[@"name"],_cityDataDictionary[@"country"]];
+}
+
+-(NSString *)conditionsDescription{
+    NSArray  *weatherArray   = _weatherDataDictionary[@"weather"];
+   return weatherArray[0][@"description"];
+}
+
+
+
+-(id)windDirection{
+    NSNumber *windDirectionDegrees = _weatherDataDictionary[@"deg"];
+    float temp = (windDirectionDegrees.floatValue -11.25) / 22.5;
+    NSArray *compassDirections = [NSArray arrayWithObjects:@"N",@"NNE",@"NE",@"ENE",@"E",@"ESE", @"SE",@"SSE",@"S",@"SSW",@"SW",@"WSW",@"W",@"WNW",@"NW",@"NNW",nil];
+    int index = fabsf(temp);
+    return compassDirections[index];
+    
+    
 }
 
 
