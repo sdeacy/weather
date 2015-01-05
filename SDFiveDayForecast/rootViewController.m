@@ -11,7 +11,6 @@
 #import "AFNetworking.h"
 #import "DayForecastTableViewCell.h"
 #import "SDCityWeatherData.h"
-//#import <QuartzCore/QuartzCore.h>
 
 
 @interface rootViewController ()
@@ -26,7 +25,7 @@
     _searchCity = @"dublin,ie";            //default city is Dublin.
     [self getData];                      //loads data from web
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"clouds.png"]]];
-    self.backgroundImageView.layer.cornerRadius = 115;
+    self.backgroundImageView.layer.cornerRadius = 115;                  //
     self.iconImageView.layer.cornerRadius = 45;
 }
 

@@ -16,6 +16,7 @@
     
 }
 
+//converts temperature from kelvin to celsius
 -(NSString*)temperatureCelsius{
     
     NSDictionary *temperatureDictionary = _weatherDataDictionary[@"temp"];
@@ -25,6 +26,8 @@
     
 }
 
+//loads image data for the weather icon from the url specified
+//(possibly a problem on slow networks, a better implementation would be to have the icons stored locally, but they are not available at present
 -(UIImage*)buildIconURL{
     
     NSArray     *weatherArray   = _weatherDataDictionary[@"weather"];
@@ -35,6 +38,7 @@
     return [UIImage imageWithData:imageData];
 }
 
+//returns a formated date from a unix time stamp
 -(NSString*)date{
     
     NSNumber *dateUnixTime = _weatherDataDictionary[@"dt"];
@@ -47,6 +51,7 @@
     return dateString;
 }
 
+//returns a day from a unix time stamp
 -(NSString *)day{
     NSNumber *dateUnixTime = _weatherDataDictionary[@"dt"];
     NSTimeInterval _interval=dateUnixTime.intValue;
@@ -58,37 +63,38 @@
     return day;
 }
 
+//returns a value for humidity, and a percent sign
 -(NSString*)humidityPerCent{
     _humidityPerCent = _weatherDataDictionary[@"humidity"];
     return [NSString stringWithFormat:@"%d%%",[_humidityPerCent intValue]];
 }
+
+//returns windspeed and 'm/s'
 -(NSString *)     windSpeedMPS{
     return [NSString stringWithFormat:@"%d m/s",[_weatherDataDictionary[@"speed"] intValue]];
 }
 
+//returns city name and country name
 -(NSString *)cityName;{
-    return [NSString stringWithFormat:@"%@, %@",_cityDataDictionary[@"name"],_cityDataDictionary[@"country"]];
+    return [NSString stringWithFormat:@"%@  %@",_cityDataDictionary[@"name"],_cityDataDictionary[@"country"]];
 }
 
+//returns a description of teh weather conditions
 -(NSString *)conditionsDescription{
     NSArray  *weatherArray   = _weatherDataDictionary[@"weather"];
    return weatherArray[0][@"description"];
 }
 
-
-
+//converts degrees to compass wind direction
 -(id)windDirection{
+    
     NSNumber *windDirectionDegrees = _weatherDataDictionary[@"deg"];
     float temp = (windDirectionDegrees.floatValue -11.25) / 22.5;
     NSArray *compassDirections = [NSArray arrayWithObjects:@"North",@"NNE",@"NE",@"ENE",@"East",@"ESE", @"SE",@"SSE",@"South",@"SSW",@"SW",@"WSW",@"West",@"WNW",@"NW",@"NNW",nil];
     int index = fabsf(temp);
     return compassDirections[index];
     
-    
 }
-
-
-
 
 
 @end
