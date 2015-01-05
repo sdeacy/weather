@@ -11,7 +11,7 @@
 #import "AFNetworking.h"
 #import "DayForecastTableViewCell.h"
 #import "SDCityWeatherData.h"
-#import <QuartzCore/QuartzCore.h>
+//#import <QuartzCore/QuartzCore.h>
 
 
 @interface rootViewController ()
@@ -36,34 +36,54 @@
 }
 
 
-//activates search for another city, after user entered city name
+//activates search for another city, after user enters city name
 - (IBAction)searchButton:(id)sender {
-    _searchMessageLabel.text = @"";
+    _searchMessageLabel.text = @"";              //clears any previous messages
     NSString *userInput = _searchTextField.text;
-    NSString *trimmedUserInput = [userInput stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-    trimmedUserInput = [trimmedUserInput stringByReplacingOccurrencesOfString:@" " withString:@"_"];
-    NSLog(@"trimmed: %@",trimmedUserInput);
-    //ref http://stackoverflow.com/questions/9291624/how-do-i-remove-leading-trailing-whitespace-of-nsstring-inside-an-nsarray
-    _searchCity = trimmedUserInput;
-    [_searchTextField resignFirstResponder];                //removes keyboard
-    [self getData];
+    NSString *trimmedUserInput = [userInput stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];  //removes leading and trailing whitespace
+    //trimmedUserInput = [trimmedUserInput stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+    NSCharacterSet *nonAlphaNumericCharacters = [[ NSCharacterSet alphanumericCharacterSet]invertedSet];
+    NSRange badCharacterRange = [trimmedUserInput rangeOfCharacterFromSet:nonAlphaNumericCharacters];
+   
+    
+    
+    if(badCharacterRange.location !=  NSNotFound){
+        NSLog(@"found");
+        _searchMessageLabel.text = @"Enter letters only, please.....";
+    }
+    
+    else
+    {
+        NSLog(@"trimmed: %@",trimmedUserInput);
+        //ref http://stackoverflow.com/questions/9291624/how-do-i-remove-leading-trailing-whitespace-of-nsstring-inside-an-nsarray
+        _searchCity = trimmedUserInput;
+        [_searchTextField resignFirstResponder];                //removes keyboard
+        [self getData];
+        
+    }
+   
 }
 
 
 
-//
+
+
+
+//loads data into the UI
 -(void)buildUI{
     
-    _searchMessageLabel.text  = @" ";
-    SDCityWeatherData *cityWeatherData = [[SDCityWeatherData  alloc]init];
+    _searchMessageLabel.text  = @" ";                                               //clears any previous messages
+    SDCityWeatherData *cityWeatherData = [[SDCityWeatherData  alloc]init];              //SDweatherData class processes the data received from www
     [cityWeatherData setWeatherDataDictionary:[_daysForecastsArray objectAtIndex:0]];
-    [cityWeatherData setCityDataDictionary:_cityDataDictionary];
-    _cityNameLabel.text     = [cityWeatherData cityName];
-    _temperatureLabel.text  = [cityWeatherData temperatureCelsius];
-    _humidityLabel.text     = [cityWeatherData humidityPerCent];
-    _windSpeedLabel.text    = [NSString stringWithFormat:@"%@ %@",[cityWeatherData windSpeedMPS],[cityWeatherData windDirection]];
-    _conditionsDescriptionLabel.text = [cityWeatherData conditionsDescription];
-    _iconImageView.image    = [cityWeatherData buildIconURL];
+    [cityWeatherData setCityDataDictionary:_cityDataDictionary];                        //feed in the first days forecast to the instance of SDweatherData
+    
+    _cityNameLabel.text                 = [cityWeatherData cityName];                   //fills in labels' content and image
+    _temperatureLabel.text              = [cityWeatherData temperatureCelsius];
+    _humidityLabel.text                 = [cityWeatherData humidityPerCent];
+    _windSpeedLabel.text                = [cityWeatherData windSpeedMPS];
+    _conditionsDescriptionLabel.text    = [cityWeatherData conditionsDescription];
+    _iconImageView.image                = [cityWeatherData buildIconURL];
+    _windDirectionLabel.text            = [cityWeatherData windDirection];
     
 }
 
@@ -72,12 +92,11 @@
 
 
 -(void)getData{
+    
     NSLog(@"%@",@"getting.....");
     _searchMessageLabel.text  = @"Getting data...";
-   // http://api.openweathermap.org/data/2.5/weather?q=London,uk
-
     NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=5&mode=json&APPID=91b6d62cbff687d9e5bff155939d33e0&type=accurate&q=", _searchCity];
-    NSLog(@"%@",searchCityURL);
+
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:searchCityURL
       parameters:nil
@@ -85,24 +104,22 @@
              NSLog(@"got data...");
              NSDictionary *returnedData = (NSDictionary*)responseObject;
              if ([returnedData[@"cod"]  isEqual: @"200"]) {
-                 _daysForecastsArray = returnedData[@"list"];
-                 _cityDataDictionary = returnedData[@"city"];
+                 _daysForecastsArray = returnedData[@"list"];                       //creates an array of objects, each object contains data for one days forecast
+                 _cityDataDictionary = returnedData[@"city"];                       //creates a dictionary with data about the city that was searched for
                  
              }
-             else if ([returnedData[@"cod"]  isEqual: @"404"]){
+             else if ([returnedData[@"cod"]  isEqual: @"404"]){                     //if city not found, error 404 returned from www
                  NSLog(@"%@",@"404");
                  _searchMessageLabel.text  = @"City not found, try again";
 
              }
-             NSLog(@"_daysForecastsArray: %lu", (unsigned long)[_daysForecastsArray count]);
- //            [_tableView reloadData];
-             [self buildUI];
+             [self buildUI];                                                       //returned data is sent to be displayed
              
              
              
-         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+         } failure:^(AFHTTPRequestOperation *operation, NSError *error) {           //if error happpens during network request
              NSLog(@"%@",@"Error getting data");
-             _searchMessageLabel.text  = @"City not found, try again";
+             _searchMessageLabel.text  = @"Network problem, please try again...";
          }];
     
 }
@@ -114,8 +131,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
     ViewController *transferViewController = [segue destinationViewController];
-    transferViewController.searchCity = _searchCity;
+    transferViewController.daysForecastsArray   = _daysForecastsArray;                  //pass an array containing 5 objects(days weather forecasts) to the next screen, the collection view
     
 }
 

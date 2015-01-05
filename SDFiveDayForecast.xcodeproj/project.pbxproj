@@ -14,7 +14,6 @@
 		FECC6B941A55CE8B003B6EB3 /* toolbar_find.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC6B931A55CE8B003B6EB3 /* toolbar_find.png */; };
 		FECEADA21A40313400510884 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA11A40313400510884 /* main.m */; };
 		FECEADA51A40313400510884 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA41A40313400510884 /* AppDelegate.m */; };
-		FECEADA81A40313400510884 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA71A40313400510884 /* ViewController.m */; };
 		FECEADAB1A40313500510884 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FECEADA91A40313500510884 /* Main.storyboard */; };
 		FECEADAD1A40313500510884 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FECEADAC1A40313500510884 /* Images.xcassets */; };
 		FECEADB01A40313500510884 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECEADAE1A40313500510884 /* LaunchScreen.xib */; };
@@ -28,7 +27,6 @@
 		FECEADDF1A40352C00510884 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADD41A40352C00510884 /* AFURLRequestSerialization.m */; };
 		FECEADE01A40352C00510884 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADD61A40352C00510884 /* AFURLResponseSerialization.m */; };
 		FECEADE11A40352C00510884 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADD81A40352C00510884 /* AFURLSessionManager.m */; };
-		FECEADE41A40392700510884 /* DayForecastTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADE31A40392700510884 /* DayForecastTableViewCell.m */; };
 		FECEAE181A40D32D00510884 /* clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = FECEAE171A40D32C00510884 /* clouds.png */; };
 /* End PBXBuildFile section */
 
@@ -57,8 +55,6 @@
 		FECEADA11A40313400510884 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FECEADA31A40313400510884 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FECEADA41A40313400510884 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FECEADA61A40313400510884 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FECEADA71A40313400510884 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FECEADAA1A40313500510884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FECEADAC1A40313500510884 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FECEADAF1A40313500510884 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -84,8 +80,6 @@
 		FECEADD61A40352C00510884 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		FECEADD71A40352C00510884 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		FECEADD81A40352C00510884 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		FECEADE21A40392700510884 /* DayForecastTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayForecastTableViewCell.h; sourceTree = "<group>"; };
-		FECEADE31A40392700510884 /* DayForecastTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayForecastTableViewCell.m; sourceTree = "<group>"; };
 		FECEAE171A40D32C00510884 /* clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -133,14 +127,10 @@
 				FECEADC51A40352C00510884 /* AFNetworking */,
 				FECEADA41A40313400510884 /* AppDelegate.m */,
 				FECEADA31A40313400510884 /* AppDelegate.h */,
-				FECEADA61A40313400510884 /* ViewController.h */,
-				FECEADA71A40313400510884 /* ViewController.m */,
 				FECEADA91A40313500510884 /* Main.storyboard */,
 				FECEADAC1A40313500510884 /* Images.xcassets */,
 				FECEADAE1A40313500510884 /* LaunchScreen.xib */,
 				FECEAD9F1A40313400510884 /* Supporting Files */,
-				FECEADE21A40392700510884 /* DayForecastTableViewCell.h */,
-				FECEADE31A40392700510884 /* DayForecastTableViewCell.m */,
 				FE1F53C91A51754A001925D1 /* SDCityWeatherData.h */,
 				FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */,
 				FECC6B901A547123003B6EB3 /* rootViewController.h */,
@@ -309,14 +299,12 @@
 			files = (
 				FECEADD91A40352C00510884 /* AFHTTPRequestOperation.m in Sources */,
 				FE54D3BF1A5AE76800062840 /* WeatherCollectionViewCell.m in Sources */,
-				FECEADA81A40313400510884 /* ViewController.m in Sources */,
 				FECEADDA1A40352C00510884 /* AFHTTPRequestOperationManager.m in Sources */,
 				FECEADDC1A40352C00510884 /* AFNetworkReachabilityManager.m in Sources */,
 				FE1F53CB1A51754B001925D1 /* SDCityWeatherData.m in Sources */,
 				FE54D3BC1A5AE74400062840 /* WeatherCollectionViewController.m in Sources */,
 				FECEADE01A40352C00510884 /* AFURLResponseSerialization.m in Sources */,
 				FECEADDE1A40352C00510884 /* AFURLConnectionOperation.m in Sources */,
-				FECEADE41A40392700510884 /* DayForecastTableViewCell.m in Sources */,
 				FECEADDD1A40352C00510884 /* AFSecurityPolicy.m in Sources */,
 				FECEADDB1A40352C00510884 /* AFHTTPSessionManager.m in Sources */,
 				FECEADDF1A40352C00510884 /* AFURLRequestSerialization.m in Sources */,

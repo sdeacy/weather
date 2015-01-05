@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UILabel        *searchMessageLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @property (weak, nonatomic) IBOutlet UILabel *conditionsDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *windDirectionLabel;
 
 
 - (IBAction)searchButton:(id)sender;

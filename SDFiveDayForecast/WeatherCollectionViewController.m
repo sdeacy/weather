@@ -22,28 +22,19 @@ static NSString * const reuseIdentifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-    _searchCity = @"dublin,ie";            //default city is Dublin.
+    //_searchCity = @"dublin,ie";            //default city is Dublin.
 
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
-    [self getData];
-     self.weatherCollectionView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"clouds.png"]];
-    
-    
- 
   
-    
-    
-
+     self.weatherCollectionView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"clouds.png"]];
 }
 
 -(void)getData{
-    NSLog(@"%@",@"getting.....");
+    NSLog(@"%@",@"collection view . getting.....");
     // http://api.openweathermap.org/data/2.5/weather?q=London,uk
     
     NSString *searchCityURL = [NSString stringWithFormat:@"%@%@", @"http://api.openweathermap.org/data/2.5/forecast/daily?cnt=5&mode=json&q=", _searchCity];
@@ -106,6 +97,7 @@ static NSString * const reuseIdentifier = @"Cell";
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"building cell..");
    WeatherCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"weatherCell" forIndexPath:indexPath];
     SDCityWeatherData *cityWeatherData = [[SDCityWeatherData alloc]init];
     [cityWeatherData setWeatherDataDictionary:[_daysForecastsArray objectAtIndex:[indexPath row]]];

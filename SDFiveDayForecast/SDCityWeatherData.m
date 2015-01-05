@@ -80,7 +80,7 @@
 -(id)windDirection{
     NSNumber *windDirectionDegrees = _weatherDataDictionary[@"deg"];
     float temp = (windDirectionDegrees.floatValue -11.25) / 22.5;
-    NSArray *compassDirections = [NSArray arrayWithObjects:@"N",@"NNE",@"NE",@"ENE",@"E",@"ESE", @"SE",@"SSE",@"S",@"SSW",@"SW",@"WSW",@"W",@"WNW",@"NW",@"NNW",nil];
+    NSArray *compassDirections = [NSArray arrayWithObjects:@"North",@"NNE",@"NE",@"ENE",@"East",@"ESE", @"SE",@"SSE",@"South",@"SSW",@"SW",@"WSW",@"West",@"WNW",@"NW",@"NNW",nil];
     int index = fabsf(temp);
     return compassDirections[index];
     
