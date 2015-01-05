@@ -27,6 +27,7 @@
 -(NSString *)temperatureCelsius;
 -(UIImage  *)buildIconURL;
 -(NSString *)date;
+-(NSString *)day;
 -(NSString *)humidityPerCent;
 -(NSString *)windSpeedMPS;
 -(id)windDirection;

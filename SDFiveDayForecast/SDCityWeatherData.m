@@ -47,6 +47,17 @@
     return dateString;
 }
 
+-(NSString *)day{
+    NSNumber *dateUnixTime = _weatherDataDictionary[@"dt"];
+    NSTimeInterval _interval=dateUnixTime.intValue;
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+    NSDateFormatter *formatter= [[NSDateFormatter alloc] init];
+    [formatter setLocale:[NSLocale currentLocale]];
+    [formatter setDateFormat:@"EEEE"];
+    NSString *day = [formatter stringFromDate:date];
+    return day;
+}
+
 -(NSString*)humidityPerCent{
     _humidityPerCent = _weatherDataDictionary[@"humidity"];
     return [NSString stringWithFormat:@"%d%%",[_humidityPerCent intValue]];
