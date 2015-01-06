@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE019E351A5C860A0093D312 /* SDWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE019E341A5C860A0093D312 /* SDWCollectionViewCell.m */; };
 		FE1F53CB1A51754B001925D1 /* SDCityWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */; };
-		FE54D3BC1A5AE74400062840 /* WeatherCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE54D3BB1A5AE74400062840 /* WeatherCollectionViewController.m */; };
-		FE54D3BF1A5AE76800062840 /* WeatherCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE54D3BE1A5AE76800062840 /* WeatherCollectionViewCell.m */; };
+		FE375EB21A5C83860042354C /* SDWCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE375EB11A5C83860042354C /* SDWCollectionViewController.m */; };
+		FE6AD8EC1A5C80BC00F8C53A /* SDRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6AD8EB1A5C80BC00F8C53A /* SDRootViewController.m */; };
 		FEC3B6741A5C2DCF004069F3 /* AFNetworkActivityIndicatorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC3B6641A5C2DCF004069F3 /* AFNetworkActivityIndicatorManager.m */; };
 		FEC3B6751A5C2DCF004069F3 /* UIActivityIndicatorView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC3B6661A5C2DCF004069F3 /* UIActivityIndicatorView+AFNetworking.m */; };
 		FEC3B6761A5C2DCF004069F3 /* UIAlertView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC3B6681A5C2DCF004069F3 /* UIAlertView+AFNetworking.m */; };
@@ -27,7 +28,6 @@
 		FEC3B6961A5C30FA004069F3 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC3B68B1A5C30FA004069F3 /* AFURLRequestSerialization.m */; };
 		FEC3B6971A5C30FA004069F3 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC3B68D1A5C30FA004069F3 /* AFURLResponseSerialization.m */; };
 		FEC3B6981A5C30FA004069F3 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC3B68F1A5C30FA004069F3 /* AFURLSessionManager.m */; };
-		FECC6B921A547123003B6EB3 /* rootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FECC6B911A547123003B6EB3 /* rootViewController.m */; };
 		FECC6B941A55CE8B003B6EB3 /* toolbar_find.png in Resources */ = {isa = PBXBuildFile; fileRef = FECC6B931A55CE8B003B6EB3 /* toolbar_find.png */; };
 		FECEADA21A40313400510884 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA11A40313400510884 /* main.m */; };
 		FECEADA51A40313400510884 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FECEADA41A40313400510884 /* AppDelegate.m */; };
@@ -49,12 +49,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE019E331A5C860A0093D312 /* SDWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWCollectionViewCell.h; sourceTree = "<group>"; };
+		FE019E341A5C860A0093D312 /* SDWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWCollectionViewCell.m; sourceTree = "<group>"; };
 		FE1F53C91A51754A001925D1 /* SDCityWeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCityWeatherData.h; sourceTree = "<group>"; };
 		FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCityWeatherData.m; sourceTree = "<group>"; };
-		FE54D3BB1A5AE74400062840 /* WeatherCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCollectionViewController.m; sourceTree = "<group>"; };
-		FE54D3BD1A5AE76000062840 /* WeatherCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherCollectionViewController.h; sourceTree = "<group>"; };
-		FE54D3BE1A5AE76800062840 /* WeatherCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherCollectionViewCell.m; sourceTree = "<group>"; };
-		FE54D3C01A5AE77200062840 /* WeatherCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherCollectionViewCell.h; sourceTree = "<group>"; };
+		FE375EB01A5C83860042354C /* SDWCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWCollectionViewController.h; sourceTree = "<group>"; };
+		FE375EB11A5C83860042354C /* SDWCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWCollectionViewController.m; sourceTree = "<group>"; };
+		FE6AD8EA1A5C80BC00F8C53A /* SDRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRootViewController.h; sourceTree = "<group>"; };
+		FE6AD8EB1A5C80BC00F8C53A /* SDRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDRootViewController.m; sourceTree = "<group>"; };
 		FEC3B6631A5C2DCF004069F3 /* AFNetworkActivityIndicatorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkActivityIndicatorManager.h; sourceTree = "<group>"; };
 		FEC3B6641A5C2DCF004069F3 /* AFNetworkActivityIndicatorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkActivityIndicatorManager.m; sourceTree = "<group>"; };
 		FEC3B6651A5C2DCF004069F3 /* UIActivityIndicatorView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActivityIndicatorView+AFNetworking.h"; sourceTree = "<group>"; };
@@ -91,8 +93,6 @@
 		FEC3B68D1A5C30FA004069F3 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		FEC3B68E1A5C30FA004069F3 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		FEC3B68F1A5C30FA004069F3 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
-		FECC6B901A547123003B6EB3 /* rootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rootViewController.h; sourceTree = "<group>"; };
-		FECC6B911A547123003B6EB3 /* rootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rootViewController.m; sourceTree = "<group>"; };
 		FECC6B931A55CE8B003B6EB3 /* toolbar_find.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toolbar_find.png; sourceTree = "<group>"; };
 		FECEAD9C1A40313400510884 /* SDFiveDayForecast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SDFiveDayForecast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FECEADA01A40313400510884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -206,15 +206,15 @@
 				FECEADA91A40313500510884 /* Main.storyboard */,
 				FECEADAC1A40313500510884 /* Images.xcassets */,
 				FECEADAE1A40313500510884 /* LaunchScreen.xib */,
+				FE6AD8EA1A5C80BC00F8C53A /* SDRootViewController.h */,
+				FE6AD8EB1A5C80BC00F8C53A /* SDRootViewController.m */,
+				FE375EB01A5C83860042354C /* SDWCollectionViewController.h */,
+				FE375EB11A5C83860042354C /* SDWCollectionViewController.m */,
+				FE019E331A5C860A0093D312 /* SDWCollectionViewCell.h */,
+				FE019E341A5C860A0093D312 /* SDWCollectionViewCell.m */,
 				FECEAD9F1A40313400510884 /* Supporting Files */,
 				FE1F53C91A51754A001925D1 /* SDCityWeatherData.h */,
 				FE1F53CA1A51754B001925D1 /* SDCityWeatherData.m */,
-				FECC6B901A547123003B6EB3 /* rootViewController.h */,
-				FECC6B911A547123003B6EB3 /* rootViewController.m */,
-				FE54D3BD1A5AE76000062840 /* WeatherCollectionViewController.h */,
-				FE54D3BB1A5AE74400062840 /* WeatherCollectionViewController.m */,
-				FE54D3C01A5AE77200062840 /* WeatherCollectionViewCell.h */,
-				FE54D3BE1A5AE76800062840 /* WeatherCollectionViewCell.m */,
 			);
 			path = SDFiveDayForecast;
 			sourceTree = "<group>";
@@ -347,26 +347,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE54D3BF1A5AE76800062840 /* WeatherCollectionViewCell.m in Sources */,
 				FEC3B6741A5C2DCF004069F3 /* AFNetworkActivityIndicatorManager.m in Sources */,
 				FE1F53CB1A51754B001925D1 /* SDCityWeatherData.m in Sources */,
-				FE54D3BC1A5AE74400062840 /* WeatherCollectionViewController.m in Sources */,
 				FEC3B6971A5C30FA004069F3 /* AFURLResponseSerialization.m in Sources */,
 				FEC3B6951A5C30FA004069F3 /* AFURLConnectionOperation.m in Sources */,
 				FEC3B6791A5C2DCF004069F3 /* UIProgressView+AFNetworking.m in Sources */,
+				FE019E351A5C860A0093D312 /* SDWCollectionViewCell.m in Sources */,
 				FEC3B6771A5C2DCF004069F3 /* UIButton+AFNetworking.m in Sources */,
+				FE375EB21A5C83860042354C /* SDWCollectionViewController.m in Sources */,
 				FEC3B6911A5C30FA004069F3 /* AFHTTPRequestOperationManager.m in Sources */,
 				FEC3B6781A5C2DCF004069F3 /* UIImageView+AFNetworking.m in Sources */,
 				FEC3B6941A5C30FA004069F3 /* AFSecurityPolicy.m in Sources */,
 				FEC3B6761A5C2DCF004069F3 /* UIAlertView+AFNetworking.m in Sources */,
 				FEC3B67B1A5C2DCF004069F3 /* UIWebView+AFNetworking.m in Sources */,
 				FEC3B6961A5C30FA004069F3 /* AFURLRequestSerialization.m in Sources */,
+				FE6AD8EC1A5C80BC00F8C53A /* SDRootViewController.m in Sources */,
 				FEC3B6931A5C30FA004069F3 /* AFNetworkReachabilityManager.m in Sources */,
 				FEC3B6751A5C2DCF004069F3 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				FEC3B67A1A5C2DCF004069F3 /* UIRefreshControl+AFNetworking.m in Sources */,
 				FECEADA51A40313400510884 /* AppDelegate.m in Sources */,
 				FEC3B6901A5C30FA004069F3 /* AFHTTPRequestOperation.m in Sources */,
-				FECC6B921A547123003B6EB3 /* rootViewController.m in Sources */,
 				FEC3B6921A5C30FA004069F3 /* AFHTTPSessionManager.m in Sources */,
 				FECEADA21A40313400510884 /* main.m in Sources */,
 				FEC3B6981A5C30FA004069F3 /* AFURLSessionManager.m in Sources */,

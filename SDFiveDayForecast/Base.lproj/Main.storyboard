@@ -7,7 +7,7 @@
         <!--Root View Controller-->
         <scene sceneID="qce-cB-oPM">
             <objects>
-                <viewController id="b24-Ya-iz6" customClass="rootViewController" sceneMemberID="viewController">
+                <viewController id="b24-Ya-iz6" customClass="SDRootViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B7F-sT-7s1"/>
                         <viewControllerLayoutGuide type="bottom" id="J9E-Ym-Ko2"/>
@@ -149,10 +149,10 @@
             </objects>
             <point key="canvasLocation" x="-1780" y="-23"/>
         </scene>
-        <!--Weather Collection View Controller-->
+        <!--Collection View Controller-->
         <scene sceneID="ewP-e5-ZTW">
             <objects>
-                <collectionViewController id="1nl-j9-9We" customClass="WeatherCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController id="1nl-j9-9We" customClass="SDWCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ML4-C5-QRg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,8 +248,8 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="dZb-lX-oW5"/>
                     <connections>
+                        <outlet property="SDWCollectionView" destination="ML4-C5-QRg" id="3jg-nY-ddK"/>
                         <outlet property="collectionView" destination="ML4-C5-QRg" id="zpW-S3-A2y"/>
-                        <outlet property="weatherCollectionView" destination="ML4-C5-QRg" id="3jg-nY-ddK"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9km-cu-zD9" userLabel="First Responder" sceneMemberID="firstResponder"/>
