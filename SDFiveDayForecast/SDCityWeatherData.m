@@ -7,29 +7,26 @@
 //
 
 #import "SDCityWeatherData.h"
+#import "AFNetworking.h"
+
 
 @implementation SDCityWeatherData
 
--(NSString*)description{
-    
+-(NSString*)description {
     return [NSString stringWithFormat:@"City: %@\n Temperature: %@\n Wind: %@\n Humidity: %@",_cityName,_temperature,_windSpeedMPS,_humidityPerCent];
-    
 }
 
 //converts temperature from kelvin to celsius
--(NSString*)temperatureCelsius{
-    
+-(NSString*)temperatureCelsius {
     NSDictionary *temperatureDictionary = _weatherDataDictionary[@"temp"];
     NSNumber *temperatureDay = [temperatureDictionary objectForKey:@"day"];
     int tempCelsius = ceil([temperatureDay floatValue]- 273.51);
     return [NSString stringWithFormat:@"%dC",tempCelsius];
-    
 }
 
 //loads image data for the weather icon from the url specified
 //(possibly a problem on slow networks, a better implementation would be to have the icons stored locally, but they are not available at present
--(UIImage*)buildIconURL{
-    
+-(UIImage*)buildIconURL {
     NSArray     *weatherArray   = _weatherDataDictionary[@"weather"];
     NSString    *icon           = weatherArray[0][@"icon"];
     NSString    *baseURL        = @"http://openweathermap.org/img/w/";
@@ -39,8 +36,7 @@
 }
 
 //returns a formated date from a unix time stamp
--(NSString*)date{
-    
+-(NSString*)date {
     NSNumber *dateUnixTime = _weatherDataDictionary[@"dt"];
     NSTimeInterval _interval=dateUnixTime.intValue;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
@@ -52,7 +48,7 @@
 }
 
 //returns a day from a unix time stamp
--(NSString *)day{
+-(NSString *)day {
     NSNumber *dateUnixTime = _weatherDataDictionary[@"dt"];
     NSTimeInterval _interval=dateUnixTime.intValue;
     NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
@@ -64,36 +60,34 @@
 }
 
 //returns a value for humidity, and a percent sign
--(NSString*)humidityPerCent{
+-(NSString*)humidityPerCent {
     _humidityPerCent = _weatherDataDictionary[@"humidity"];
     return [NSString stringWithFormat:@"%d%%",[_humidityPerCent intValue]];
 }
 
 //returns windspeed and 'm/s'
--(NSString *)     windSpeedMPS{
+-(NSString *)     windSpeedMPS {
     return [NSString stringWithFormat:@"%d m/s",[_weatherDataDictionary[@"speed"] intValue]];
 }
 
 //returns city name and country name
--(NSString *)cityName;{
+-(NSString *)cityName {
     return [NSString stringWithFormat:@"%@  %@",_cityDataDictionary[@"name"],_cityDataDictionary[@"country"]];
 }
 
 //returns a description of teh weather conditions
--(NSString *)conditionsDescription{
+-(NSString *)conditionsDescription {
     NSArray  *weatherArray   = _weatherDataDictionary[@"weather"];
    return weatherArray[0][@"description"];
 }
 
 //converts degrees to compass wind direction
--(id)windDirection{
-    
+-(id)windDirection {
     NSNumber *windDirectionDegrees = _weatherDataDictionary[@"deg"];
     float temp = (windDirectionDegrees.floatValue -11.25) / 22.5;
-    NSArray *compassDirections = [NSArray arrayWithObjects:@"North",@"NNE",@"NE",@"ENE",@"East",@"ESE", @"SE",@"SSE",@"South",@"SSW",@"SW",@"WSW",@"West",@"WNW",@"NW",@"NNW",nil];
+    NSArray *compassDirections = @[@"North",@"NNE",@"NE",@"ENE",@"East",@"ESE", @"SE",@"SSE",@"South",@"SSW",@"SW",@"WSW",@"West",@"WNW",@"NW",@"NNW"];
     int index = fabsf(temp);
     return compassDirections[index];
-    
 }
 
 

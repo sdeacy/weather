@@ -25,6 +25,6 @@
 
 
 - (IBAction)searchButton:(id)sender;
--(void)buildUI;
--(void)getData;
+- (void)buildUI;
+- (void)getData;
 @end

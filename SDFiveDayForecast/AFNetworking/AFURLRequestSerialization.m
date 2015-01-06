@@ -1,4 +1,4 @@
-// AFURLRequestSerialization.m
+// AFSerialization.h
 //
 // Copyright (c) 2013-2014 AFNetworking (http://afnetworking.com)
 //
@@ -380,7 +380,10 @@ forHTTPHeaderField:(NSString *)field
                              writingStreamContentsToFile:(NSURL *)fileURL
                                        completionHandler:(void (^)(NSError *error))handler
 {
-    NSParameterAssert(request.HTTPBodyStream);
+    if (!request.HTTPBodyStream) {
+        return [request mutableCopy];
+    }
+
     NSParameterAssert([fileURL isFileURL]);
 
     NSInputStream *inputStream = request.HTTPBodyStream;
