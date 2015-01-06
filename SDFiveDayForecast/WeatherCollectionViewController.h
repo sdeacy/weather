@@ -12,7 +12,6 @@
 
 @property (nonatomic, strong) NSArray   *daysForecastsArray;
 @property (nonatomic, strong) NSString  *searchCity;
-
 @property (strong, nonatomic) IBOutlet UICollectionView *weatherCollectionView;
 
 @end

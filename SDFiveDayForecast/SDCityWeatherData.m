@@ -72,10 +72,14 @@
 
 //returns city name and country name
 -(NSString *)cityName {
-    return [NSString stringWithFormat:@"%@  %@",_cityDataDictionary[@"name"],_cityDataDictionary[@"country"]];
+    NSString *country = _cityDataDictionary[@"country"];
+    if ([country  isEqualToString : @"United States of America"]) {
+        country = @"USA";
+    }
+    return [NSString stringWithFormat:@"%@  %@",_cityDataDictionary[@"name"],country];
 }
 
-//returns a description of teh weather conditions
+//returns a description of the weather conditions
 -(NSString *)conditionsDescription {
     NSArray  *weatherArray   = _weatherDataDictionary[@"weather"];
    return weatherArray[0][@"description"];

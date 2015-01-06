@@ -26,7 +26,6 @@
     
     _searchCity = @"dublin,ie";            //default city is Dublin.
     [self getData];                      //loads data from web
-    self.searchTextField.keyboardType = UIKeyboardTypeASCIICapable;
     
     [self.view setBackgroundColor:[UIColor colorWithPatternImage:[UIImage imageNamed:@"clouds.png"]]];
     self.backgroundImageView.layer.cornerRadius = 115;                  //creates rounded backgrounds
@@ -44,37 +43,20 @@
 - (IBAction)searchButton:(id)sender {
     _searchMessageLabel.text = @"";              //clears any previous messages
     NSString *userInput = _searchTextField.text;
+    
     NSString *trimmedUserInput = [userInput stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];  //removes leading and trailing whitespace
-    trimmedUserInput = [trimmedUserInput stringByReplacingOccurrencesOfString:@" " withString:@"_"];
+    trimmedUserInput = [trimmedUserInput stringByReplacingOccurrencesOfString:@" " withString:@"_"];                       //so spaces in search term are not passed to the www query
     
-    
-    NSRange lcEnglishRange;
-    NSCharacterSet *lcEnglishLetters;
-    
-    lcEnglishRange.location = (unsigned int)'a';
-    lcEnglishRange.length = 26;
-    lcEnglishLetters = [NSCharacterSet characterSetWithRange:lcEnglishRange];
-    
+    //the following lines check if any entered characters are not permitted, ie characters that would cause an error in the http request
     NSCharacterSet *notPermittedInputCharacters = [[NSCharacterSet characterSetWithCharactersInString:@"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_,"]invertedSet];
-    NSRange badCharacterRange = [trimmedUserInput rangeOfCharacterFromSet:notPermittedInputCharacters];
-   
-    
-    
-    if(badCharacterRange.location !=  NSNotFound){
-        NSLog(@"found");
-        _searchMessageLabel.text = @"Input error.....";
+    if([trimmedUserInput rangeOfCharacterFromSet:notPermittedInputCharacters].location !=  NSNotFound){             //ref http://nshipster.com/nsrange/
+        _searchMessageLabel.text = @"Input error...";
     }
-    
-    else
-    {
-        NSLog(@"trimmed: %@",trimmedUserInput);
-        //ref http://stackoverflow.com/questions/9291624/how-do-i-remove-leading-trailing-whitespace-of-nsstring-inside-an-nsarray
+    else {
         _searchCity = trimmedUserInput;
         [_searchTextField resignFirstResponder];                //removes keyboard
         [self getData];
-        
     }
-   
 }
 
 

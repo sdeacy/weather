@@ -38,7 +38,6 @@
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"building cell..");
    WeatherCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"weatherCell" forIndexPath:indexPath];   //prototype cell that will be reused to display each days forecast conditions
     SDCityWeatherData *cityWeatherData = [[SDCityWeatherData alloc]init];
     [cityWeatherData setWeatherDataDictionary:[_daysForecastsArray objectAtIndex:[indexPath row]]];     //pass in data to be processed, to the instance of SDCityWeatherData
